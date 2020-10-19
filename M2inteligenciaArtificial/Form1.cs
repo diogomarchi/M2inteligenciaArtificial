@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
+using System.Threading;
+
 
 namespace M2inteligenciaArtificial
 {
@@ -20,10 +23,23 @@ namespace M2inteligenciaArtificial
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {        
+            // form maximizado
+            this.WindowState = FormWindowState.Maximized;
+
+            button2.Enabled = false;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
         {
+            // indicador de carregando
+            label9.Visible = true;
+            this.Refresh();
+                        
+
             // carrega os dados
             List<Carro> carros = cSV_Reader.read("..\\..\\casos_carros.csv");
-                      
+
             // bind
             var bindingList = new BindingList<Carro>(carros);
             var source = new BindingSource(bindingList, null);
@@ -34,8 +50,15 @@ namespace M2inteligenciaArtificial
             // resize coluna
             dataGridView1.AutoResizeColumns();
 
-            // form maximizado
-            this.WindowState = FormWindowState.Maximized;
+            label9.Visible = false;
+            button1.Enabled = false;
+            button2.Enabled = true;
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
