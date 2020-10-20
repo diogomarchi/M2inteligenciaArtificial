@@ -16,43 +16,45 @@ namespace M2inteligenciaArtificial
 
         public List<CarroComSimilaridade> carros_similaridade = new List<CarroComSimilaridade>();
 
-        public List<int> pesos = new List<int> {0,0,0,0,0,0};
+        public List<float> pesos = new List<float> {0f,0f,0f,0f,0f,0f};
 
-        Dictionary<String, int> carros_x_val = new Dictionary<String, int>{
-            {"amarok", 1 },
-            {"hilux", 2 },
-            {"silverado", 3 },
-            {"duster", 4 },
-            {"ecosport", 5 },
-            {"civic", 10},
-            {"cruze", 11},
-            {"focus", 12},
-            {"fusion", 13},
-            {"jetta", 14},
-            {"fluence", 20},
-            {"hb20", 21},
-            {"onix", 22},
-            {"sandero", 23},
-            {"gol", 25},
-            {"punto", 26},
-            {"uno", 27}
+        Dictionary<String, float> carros_x_val = new Dictionary<String, float>{
+            {"amarok", 1f },
+            {"hilux", 2f },
+            {"silverado", 3f },
+            {"duster", 4f },
+            {"ecosport", 5f },
+            {"civic", 10f},
+            {"cruze", 11f},
+            {"focus", 12f},
+            {"fusion", 13f},
+            {"jetta", 14f},
+            {"fluence", 20f},
+            {"hb20", 21f},
+            {"onix", 22f},
+            {"sandero", 23f},
+            {"gol", 25f},
+            {"punto", 26f},
+            {"uno", 27f}
         };
         
 
         public void CalculaSimilaridade(List<Carro> casos, Carro novo_caso)
         {
+            float soma_pesos = pesos.Sum();
+
             foreach (Carro caso in casos)
             {
-                float similaridade = 0F;
+                CarroComSimilaridade carroComSimilaridade = new CarroComSimilaridade(caso);
+                
+                carroComSimilaridade.SimilaridadeCarro = pesos[0] * AtributoCarro(caso.Nome_carro, novo_caso.Nome_carro, CARRO_MAX);
+                carroComSimilaridade.SimilaridadeCambio = pesos[1] * AtributoCambio(caso.Cambio, novo_caso.Cambio);
+                carroComSimilaridade.SimilaridadeCor = pesos[2] * AtributoCor(caso.Cor, novo_caso.Cor);
+                carroComSimilaridade.SimilaridadeKm = pesos[3] * AtributoKm(caso.Km, novo_caso.Km, KM_MAX);
+                carroComSimilaridade.SimilaridadeAnoMod = pesos[4] * AtributoAnomod(caso.Anomod, novo_caso.Anomod, ANO_MAX);
+                carroComSimilaridade.SimilaridadePreco = pesos[5] * AtributoPreco(caso.Preco, novo_caso.Preco, PRECO_MAX);
 
-                similaridade += pesos[0] * AtributoCarro(caso.Nome_carro, novo_caso.Nome_carro, CARRO_MAX);
-                similaridade += pesos[1] * AtributoCambio(caso.Cambio, novo_caso.Cambio);
-                similaridade += pesos[2] * AtributoCor(caso.Cor, novo_caso.Cor);
-                similaridade += pesos[3] * AtributoKm(caso.Km, novo_caso.Km, KM_MAX);
-                similaridade += pesos[4] * AtributoAnomod(caso.Anomod, novo_caso.Anomod, ANO_MAX);
-                similaridade += pesos[5] * AtributoPreco(caso.Preco, novo_caso.Preco, PRECO_MAX);
-
-                CarroComSimilaridade carroComSimilaridade = new CarroComSimilaridade(caso, similaridade);
+                carroComSimilaridade.SimilaridadeTotal(soma_pesos);
 
                 carros_similaridade.Add(carroComSimilaridade);
             }
@@ -60,10 +62,10 @@ namespace M2inteligenciaArtificial
 
         float AtributoCarro(String carro_1, String carro_2, int max_val)
         {
-            int val_1 = carros_x_val[carro_1.ToLower()];
-            int val_2 = carros_x_val[carro_2.ToLower()];
+            float val_1 = carros_x_val[carro_1.ToLower()];
+            float val_2 = carros_x_val[carro_2.ToLower()];
 
-            return 1F - Math.Abs(val_1 - val_2 / max_val);
+            return 1F - Math.Abs((val_1 - val_2) / (float)max_val);
         }
 
         float AtributoCambio(String cambio_1, String cambio_2)
@@ -85,7 +87,7 @@ namespace M2inteligenciaArtificial
 
         float AtributoKm(int km_1, int km_2, int km_max)
         {
-            return 1F - Math.Abs(km_1 - km_2 / km_max); 
+            return 1F - Math.Abs((km_1 - km_2) / (float) km_max); 
         }
 
         float AtributoAnomod(String ano_1, String ano_2, int max_ano)
@@ -93,19 +95,19 @@ namespace M2inteligenciaArtificial
             int i_ano_1 = Convert.ToInt32(ano_1.Split('/')[0]); 
             int i_ano_2 = Convert.ToInt32(ano_2.Split('/')[0]);
 
-            float sim_1 = 1F - Math.Abs(i_ano_1 - i_ano_2 / max_ano);
+            float sim_1 = 1F - Math.Abs((i_ano_1 - i_ano_2) / (float) max_ano);
 
             i_ano_1 = Convert.ToInt32(ano_1.Split('/')[1]); 
             i_ano_2 = Convert.ToInt32(ano_2.Split('/')[1]);
 
-            float sim_2 = 1F - Math.Abs(i_ano_1 - i_ano_2 / max_ano);
+            float sim_2 = 1F - Math.Abs((i_ano_1 - i_ano_2) / (float) max_ano);
 
             return (sim_1 + sim_2) / 2F;
         }
 
         float AtributoPreco(int preco_1, int preco_2, int preco_max)
         {
-            return 1F - Math.Abs(preco_1 - preco_2 / preco_max);
+            return 1F - Math.Abs((preco_1 - preco_2) / (float) preco_max);
         }
 
     }

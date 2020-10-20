@@ -8,9 +8,23 @@ namespace M2inteligenciaArtificial
 {
     class CarroComSimilaridade : Carro
     {
-        float similaridade = 0F;        
+        private float similaridade = 0F;
+        private float similaridadeCarro = 0F;
+        private float similaridadeCambio = 0F;
+        private float similaridadeCor = 0F;
+        private float similaridadeKm = 0F;
+        private float similaridadeAnoMod = 0F;
+        private float similaridadePreco = 0F;
 
-        public CarroComSimilaridade(Carro carro, float sim)
+        public float Similaridade { get => similaridade; set => similaridade = value; }
+        public float SimilaridadeCarro { get => similaridadeCarro; set => similaridadeCarro = value; }
+        public float SimilaridadeCambio { get => similaridadeCambio; set => similaridadeCambio = value; }
+        public float SimilaridadeCor { get => similaridadeCor; set => similaridadeCor = value; }
+        public float SimilaridadeKm { get => similaridadeKm; set => similaridadeKm = value; }
+        public float SimilaridadeAnoMod { get => similaridadeAnoMod; set => similaridadeAnoMod = value; }
+        public float SimilaridadePreco { get => similaridadePreco; set => similaridadePreco = value; }
+
+        public CarroComSimilaridade(Carro carro)
         {
             this.Caso = carro.Caso;
             this.Nome_carro = carro.Nome_carro;
@@ -21,8 +35,12 @@ namespace M2inteligenciaArtificial
             this.Anomod = carro.Anomod;
             this.Preco = carro.Preco;
 
-            this.similaridade = sim;
+        }
 
+        public void SimilaridadeTotal(float soma_pesos)
+        {
+            similaridade = SimilaridadeCarro + SimilaridadeCambio + SimilaridadeCor + SimilaridadeKm + SimilaridadeAnoMod + SimilaridadePreco;
+            similaridade /= soma_pesos;
         }
     }
 }

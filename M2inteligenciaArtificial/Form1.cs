@@ -70,17 +70,39 @@ namespace M2inteligenciaArtificial
 
             CalcSimilaridade calc = new CalcSimilaridade();
 
-            calc.pesos[0] = Convert.ToInt32(comboBox3.Text);
-            calc.pesos[1] = Convert.ToInt32(comboBox4.Text);
-            calc.pesos[2] = Convert.ToInt32(comboBox5.Text);
-            calc.pesos[3] = Convert.ToInt32(comboBox6.Text);
-            calc.pesos[4] = Convert.ToInt32(comboBox7.Text);
-            calc.pesos[5] = Convert.ToInt32(comboBox8.Text);
+            calc.pesos[0] = (float) Convert.ToInt32(comboBox3.Text);
+            calc.pesos[1] = (float) Convert.ToInt32(comboBox4.Text);
+            calc.pesos[2] = (float) Convert.ToInt32(comboBox5.Text);
+            calc.pesos[3] = (float) Convert.ToInt32(comboBox6.Text);
+            calc.pesos[4] = (float) Convert.ToInt32(comboBox7.Text);
+            calc.pesos[5] = (float) Convert.ToInt32(comboBox8.Text);
 
             calc.CalculaSimilaridade(carros, novo_caso);
             carros_similaridade = calc.carros_similaridade;
 
             // implementar a seleção dos mais semelhantes aqui 
+            var item = carros_similaridade.OrderByDescending(x => x.Similaridade).Take(10).ToList();
+
+            // bind
+            var bindingList = new BindingList<CarroComSimilaridade>(item);
+            var source = new BindingSource(bindingList, null);
+
+            // source da grid
+            dataGridView2.DataSource = source;            
+
+            // resize coluna
+            dataGridView2.AutoResizeColumns();
+
+            /*            Console.WriteLine(item.Caso);
+                        Console.WriteLine(item.similaridade);
+                        Console.WriteLine(item.similaridadeCarro);
+                        Console.WriteLine(item.similaridadeCambio);
+                        Console.WriteLine(item.similaridadeCor);
+                        Console.WriteLine(item.similaridadeKm);
+                        Console.WriteLine(item.similaridadeAnoMod);
+                        Console.WriteLine(item.similaridadePreco);*/
+
+            this.Refresh();
 
         }
     }
