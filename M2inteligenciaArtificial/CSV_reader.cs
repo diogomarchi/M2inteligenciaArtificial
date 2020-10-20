@@ -26,7 +26,7 @@ namespace M2inteligenciaArtificial
                     carro.Caso = Convert.ToInt32(values[0]);
                     carro.Nome_carro = values[1];
                     carro.Descricao = values[2];
-                    carro.Cambio = Convert.ToInt32(values[3]);
+                    carro.Cambio = values[3];
                     carro.Cor = values[4];
                     carro.Km = Convert.ToInt32(values[5]);
                     carro.Anomod = values[6];

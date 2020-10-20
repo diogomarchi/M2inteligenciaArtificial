@@ -56,11 +56,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,7 +76,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(10);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 370);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 174);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -116,9 +120,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(459, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Ano";
+            this.label5.Text = "Ano/Mod";
             // 
             // label6
             // 
@@ -135,6 +139,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(71, 20);
             this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "amarok";
             // 
             // textBox4
             // 
@@ -142,6 +147,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(71, 20);
             this.textBox4.TabIndex = 10;
+            this.textBox4.Text = "0";
             // 
             // textBox5
             // 
@@ -149,6 +155,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(71, 20);
             this.textBox5.TabIndex = 11;
+            this.textBox5.Text = "2010/2011";
             // 
             // textBox6
             // 
@@ -156,14 +163,15 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(71, 20);
             this.textBox6.TabIndex = 12;
+            this.textBox6.Text = "50000";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "manual",
             "automatico",
-            "indiferente"});
+            "indiferente",
+            "manual"});
             this.comboBox1.Location = new System.Drawing.Point(231, 22);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(71, 21);
@@ -387,14 +395,15 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 370);
+            this.panel2.Size = new System.Drawing.Size(800, 174);
             this.panel2.TabIndex = 26;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
@@ -408,7 +417,7 @@
             // 
             this.panel4.Controls.Add(this.label9);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 80);
+            this.panel4.Location = new System.Drawing.Point(0, 254);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 20);
             this.panel4.TabIndex = 27;
@@ -422,6 +431,27 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "carregando dados...";
             this.label9.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dataGridView2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 274);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(800, 176);
+            this.panel5.TabIndex = 27;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(10);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(800, 176);
+            this.dataGridView2.TabIndex = 0;
             // 
             // Form1
             // 
@@ -439,6 +469,8 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,6 +505,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

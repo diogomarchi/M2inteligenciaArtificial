@@ -16,6 +16,8 @@ namespace M2inteligenciaArtificial
     public partial class Form1 : Form
     {
         CSV_reader cSV_Reader = new CSV_reader();
+        List<Carro> carros;
+        List<CarroComSimilaridade> carros_similaridade = new List<CarroComSimilaridade>();
 
         public Form1()
         {
@@ -38,7 +40,7 @@ namespace M2inteligenciaArtificial
                         
 
             // carrega os dados
-            List<Carro> carros = cSV_Reader.read("..\\..\\casos_carros.csv");
+            carros = cSV_Reader.read("..\\..\\casos_carros.csv");
 
             // bind
             var bindingList = new BindingList<Carro>(carros);
@@ -58,7 +60,27 @@ namespace M2inteligenciaArtificial
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            
+            Carro novo_caso = new Carro();
+            novo_caso.Nome_carro = textBox1.Text;
+            novo_caso.Cambio = comboBox1.Text;
+            novo_caso.Cor = comboBox2.Text;
+            novo_caso.Km = Convert.ToInt32(textBox4.Text.Trim(' '));
+            novo_caso.Anomod = textBox5.Text;
+            novo_caso.Preco = Convert.ToInt32(textBox6.Text);
+
+            CalcSimilaridade calc = new CalcSimilaridade();
+
+            calc.pesos[0] = Convert.ToInt32(comboBox3.Text);
+            calc.pesos[1] = Convert.ToInt32(comboBox4.Text);
+            calc.pesos[2] = Convert.ToInt32(comboBox5.Text);
+            calc.pesos[3] = Convert.ToInt32(comboBox6.Text);
+            calc.pesos[4] = Convert.ToInt32(comboBox7.Text);
+            calc.pesos[5] = Convert.ToInt32(comboBox8.Text);
+
+            calc.CalculaSimilaridade(carros, novo_caso);
+            carros_similaridade = calc.carros_similaridade;
+
+            Console.WriteLine(carros_similaridade[0].Descricao);
         }
     }
 }

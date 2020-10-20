@@ -11,7 +11,7 @@ namespace M2inteligenciaArtificial
         private int caso;
         private string nome_carro;
         private string descricao;
-        private int cambio;
+        private string cambio;
         private string cor;
         private int km;
         private string anomod;
@@ -20,7 +20,7 @@ namespace M2inteligenciaArtificial
         public int Caso { get => caso; set => caso = value; }
         public string Nome_carro { get => nome_carro; set => nome_carro = value; }
         public string Descricao { get => descricao; set => descricao = value; }
-        public int Cambio { get => cambio; set => cambio = value; }
+        public string Cambio { get => cambio; set => cambio = value; }
         public string Cor { get => cor; set => cor = value; }
         public int Km { get => km; set => km = value; }
         public string Anomod { get => anomod; set => anomod = value; }

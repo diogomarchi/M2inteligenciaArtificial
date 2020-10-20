@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalcSimilaridade.cs" />
     <Compile Include="Carro.cs" />
+    <Compile Include="CarroComSimilaridade.cs" />
     <Compile Include="CSV_reader.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
