@@ -80,7 +80,8 @@ namespace M2inteligenciaArtificial
             calc.CalculaSimilaridade(carros, novo_caso);
             carros_similaridade = calc.carros_similaridade;
 
-            Console.WriteLine(carros_similaridade[0].Descricao);
+            // implementar a seleção dos mais semelhantes aqui 
+
         }
     }
 }
