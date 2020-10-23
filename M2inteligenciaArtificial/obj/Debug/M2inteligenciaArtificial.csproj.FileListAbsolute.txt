@@ -8,3 +8,13 @@ C:\Users\George\Desktop\George\IA\M2inteligenciaArtificial\M2inteligenciaArtific
 C:\Users\George\Desktop\George\IA\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.csproj.CoreCompileInputs.cache
 C:\Users\George\Desktop\George\IA\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.exe
 C:\Users\George\Desktop\George\IA\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.pdb
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\bin\Debug\M2inteligenciaArtificial.exe.config
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\bin\Debug\M2inteligenciaArtificial.exe
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\bin\Debug\M2inteligenciaArtificial.pdb
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.csprojAssemblyReference.cache
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.Form1.resources
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.Properties.Resources.resources
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.csproj.GenerateResource.cache
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.csproj.CoreCompileInputs.cache
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.exe
+C:\Users\Diogo\Documents\FACULDADE-MATERIAS\inteligenciaArtificial\M2inteligenciaArtificial\M2inteligenciaArtificial\obj\Debug\M2inteligenciaArtificial.pdb

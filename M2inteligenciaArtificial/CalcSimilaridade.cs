@@ -24,18 +24,18 @@ namespace M2inteligenciaArtificial
             {"silverado", 3f },
             {"duster", 4f },
             {"ecosport", 5f },
-            {"civic", 10f},
-            {"cruze", 11f},
-            {"focus", 12f},
-            {"fusion", 13f},
-            {"jetta", 14f},
-            {"fluence", 20f},
-            {"hb20", 21f},
-            {"onix", 22f},
-            {"sandero", 23f},
-            {"gol", 25f},
-            {"punto", 26f},
-            {"uno", 27f}
+            {"civic", 100f},
+            {"cruze", 101f},
+            {"focus", 102f},
+            {"fusion", 103f},
+            {"jetta", 104f},
+            {"fluence", 200f},
+            {"hb20", 201f},
+            {"onix", 202f},
+            {"sandero", 203f},
+            {"gol", 215f},
+            {"punto", 216f},
+            {"uno", 217f}
         };
         
 
