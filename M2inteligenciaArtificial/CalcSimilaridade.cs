@@ -11,7 +11,7 @@ namespace M2inteligenciaArtificial
     {
         static int CARRO_MAX = 27;
         static int KM_MAX = 251500;
-        static int ANO_MAX = 2020;
+        static int ANO_MAX = 2014;
         static int PRECO_MAX = 245000;
 
         public List<CarroComSimilaridade> carros_similaridade = new List<CarroComSimilaridade>();

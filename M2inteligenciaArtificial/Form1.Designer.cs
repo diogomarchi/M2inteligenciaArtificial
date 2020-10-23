@@ -51,12 +51,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -160,7 +160,6 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "automatico",
-            "indiferente",
             "manual"});
             this.comboBox1.Location = new System.Drawing.Point(231, 22);
             this.comboBox1.Name = "comboBox1";
@@ -187,8 +186,7 @@
             "roxo",
             "verde",
             "vermelho",
-            "vinho",
-            "indiferente"});
+            "vinho"});
             this.comboBox2.Location = new System.Drawing.Point(308, 22);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(71, 21);
@@ -382,6 +380,32 @@
             this.panel1.Size = new System.Drawing.Size(800, 80);
             this.panel1.TabIndex = 25;
             // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "amarok",
+            "civic",
+            "cruze",
+            "duster",
+            "ecosport",
+            "fluence",
+            "focus",
+            "fusion",
+            "gol",
+            "hb20",
+            "hilux",
+            "jetta",
+            "onix",
+            "punto",
+            "sandero",
+            "silverado",
+            "uno"});
+            this.comboBox9.Location = new System.Drawing.Point(154, 21);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(71, 21);
+            this.comboBox9.TabIndex = 25;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel1);
@@ -438,32 +462,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "carregando dados...";
             this.label9.Visible = false;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "amarok",
-            "civic",
-            "cruze",
-            "duster",
-            "ecosport",
-            "fluence",
-            "focus",
-            "fusion",
-            "gol",
-            "hb20",
-            "hilux",
-            "jetta",
-            "onix",
-            "punto",
-            "sandero",
-            "silverado",
-            "uno"});
-            this.comboBox9.Location = new System.Drawing.Point(154, 21);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(71, 21);
-            this.comboBox9.TabIndex = 25;
             // 
             // Form1
             // 

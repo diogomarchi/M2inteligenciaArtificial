@@ -40,7 +40,7 @@ namespace M2inteligenciaArtificial
         public void SimilaridadeTotal(float soma_pesos)
         {
             similaridade = SimilaridadeCarro + SimilaridadeCambio + SimilaridadeCor + SimilaridadeKm + SimilaridadeAnoMod + SimilaridadePreco;
-            similaridade /= soma_pesos;
+            similaridade = (similaridade * 100) / soma_pesos;            
         }
     }
 }
