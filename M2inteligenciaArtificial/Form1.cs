@@ -61,7 +61,7 @@ namespace M2inteligenciaArtificial
         private void Button2_Click(object sender, EventArgs e)
         {
             Carro novo_caso = new Carro();
-            novo_caso.Nome_carro = textBox1.Text;
+            novo_caso.Nome_carro = comboBox9.Text;
             novo_caso.Cambio = comboBox1.Text;
             novo_caso.Cor = comboBox2.Text;
             novo_caso.Km = Convert.ToInt32(textBox4.Text.Trim(' '));
