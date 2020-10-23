@@ -10,7 +10,7 @@ namespace M2inteligenciaArtificial
     class CalcSimilaridade
     {
         static int CARRO_MAX = 27;
-        static int KM_MAX = 100000000;
+        static int KM_MAX = 251500;
         static int ANO_MAX = 2020;
         static int PRECO_MAX = 245000;
 
